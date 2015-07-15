@@ -1,0 +1,21 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 2,
+  "name": "leetTab",
+  "short_name": "leetTab",
+  "description": "This extension randomly select an algorithm puzzle from leetcode",
+  "version": "1.0",
+  "author": "Siyao Li",
+
+  "icons": {
+    "16": "icon128.jpg",
+    "48": "icon128.jpg",
+    "128": "icon128.jpg" 
+  },
+
+  "chrome_url_overrides" : {
+    "newtab": "index.html"
+  },
+  "permissions": [ "https://*.leetcode.com/"]
+ }
