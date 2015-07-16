@@ -1,5 +1,5 @@
 # LeetTabForChrome
-This chrome extension randomly select an algorithm puzzle from leetcode.
+This chrome extension randomly select an algorithm puzzle from leetcode when you open a new tab.
 
 Download the crx file and manually install the extension.
 
