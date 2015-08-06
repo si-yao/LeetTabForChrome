@@ -4,13 +4,21 @@ var base_url = "https://leetcode.com";
 function getLC() {
 	$.get(random_url, function(data) {
 		var question_url = base_url + data.query.results.a.href;
-		$( "#problem" ).load(question_url+ " .question-title h3");
-		$( "#content" ).load(question_url+ " .question-content");
+		$( "#problem" ).load(question_url+ " .question-title h3", function(){
+			$( "#content" ).load(question_url+ " .question-content", function(){
+				var tag = document.getElementById('tags');
+				if (tag != null) {
+					tag.innerHTML = "\n\nSiyao";
+				}
+				var similar = document.getElementById('similar');
+				if (similar != null) {
+					similar.innerHTML = "";
+				}
+			});
+		});
 	});
 }
 
 window.onload = function () {
 	getLC();
-	document.getElementById('tags') = null;
-	document.getElementById('similar') = null;
 }
