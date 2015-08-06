@@ -1,4 +1,4 @@
-var random_url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D'https%3A%2F%2Fleetcode.com'%20and%20xpath%3D%22%2F%2Fli%5B2%5D%5B%40id%3D'pickNav'%5D%2Fa%22&format=json&diagnostics=true&callback="
+var random_url = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D'https%3A%2F%2Fleetcode.com'%20and%20xpath%3D%22%2F%2Fli%5B3%5D%5B%40id%3D'pickNav'%5D%2Fa%22&format=json&diagnostics=true&callback="
 var base_url = "https://leetcode.com";
 
 function getLC() {
@@ -11,6 +11,6 @@ function getLC() {
 
 window.onload = function () {
 	getLC();
-	document.getElementsById('tags') = null;
-	document.getElementsById('similar') = null;
+	document.getElementById('tags') = null;
+	document.getElementById('similar') = null;
 }
