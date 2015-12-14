@@ -5,6 +5,10 @@ function getLC() {
 	$.get(random_url, function(data) {
 		var question_url = base_url + data.query.results.a.href;
 		$( "#problem" ).load(question_url+ " .question-title h3", function(){
+			if ($("#problem").text() == "") {
+				$("#problem").text("No puzzle this time, feel good!");
+				return;
+			}
 			$( "#content" ).load(question_url+ " .question-content", function(){
 				var tag = document.getElementById('tags');
 				if (tag != null) {
